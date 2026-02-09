@@ -55,7 +55,7 @@ jobs:
           echo "Waiting for app to become healthy..."
           for i in {1..12}; do
             STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
-              https://${{ secrets.AZURE_WEBAPP_NAME }}.azurewebsites.net/health)
+              ${{ secrets.AZURE_WEBAPP_URL }}/)
 
             if [ "$STATUS" = "200" ]; then
               echo "Health check passed"
@@ -97,7 +97,7 @@ jobs:
           echo "Waiting for app to become healthy..."
           for i in {1..12}; do
             STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
-              https://${{ secrets.AZURE_WEBAPP_NAME }}.azurewebsites.net/health)
+              ${{ secrets.AZURE_WEBAPP_URL }}/)
 
             if [ "$STATUS" = "200" ]; then
               echo "Health check passed"
