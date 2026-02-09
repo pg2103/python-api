@@ -24,7 +24,6 @@ This step depends on which **Operating System** you are using:
 | Operating System | Command |
 | --- | --- |
 | **Windows** | `venv\Scripts\activate` |
-| **macOS / Linux** | `source venv/bin/activate` |
 
 > **Note:** Once activated, you should see `(venv)` appear at the start of your terminal prompt.
 
